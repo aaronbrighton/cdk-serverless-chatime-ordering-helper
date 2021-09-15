@@ -1,0 +1,22 @@
+{
+  "Records": [
+      {
+          "EventSource": "aws:sns",
+          "EventVersion": "1.0",
+          "EventSubscriptionArn": "",
+          "Sns": {
+              "Type": "Notification",
+              "MessageId": "",
+              "TopicArn": "",
+              "Subject": null,
+              "Message": "{\"originationNumber\":\"+16475555555\",\"destinationNumber\":\"+19022019412\",\"messageKeyword\":\"KEYWORD_518127035527\",\"messageBody\":\"M5J0A8\",\"inboundMessageId\":\"\"}",
+              "Timestamp": "",
+              "SignatureVersion": "1",
+              "Signature": "",
+              "SigningCertUrl": "",
+              "UnsubscribeUrl": "",
+              "MessageAttributes": {}
+          }
+      }
+  ]
+}

@@ -3,12 +3,36 @@ const project = new AwsCdkTypeScriptApp({
   cdkVersion: '1.95.2',
   defaultReleaseBranch: 'main',
   name: 'chatime-notifier',
-
-  // cdkDependencies: undefined,  /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */
-  // deps: [],                    /* Runtime dependencies of this module. */
-  // description: undefined,      /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],                 /* Build dependencies for this module. */
-  // packageName: undefined,      /* The "name" in package.json. */
-  // release: undefined,          /* Add release management to this project. */
+  authorAddress: 'aaron@aaronbrighton.ca',
+  authorName: 'Aaron Brighton',
+  cdkDependencies: [
+    '@aws-cdk/core',
+    '@aws-cdk/aws-sns',
+    '@aws-cdk/aws-sns-subscriptions',
+    '@aws-cdk/aws-lambda',
+    '@aws-cdk/aws-lambda-nodejs',
+    '@aws-cdk/aws-location',
+    '@aws-cdk/aws-iam',
+    '@aws-cdk/aws-events',
+    '@aws-cdk/aws-events-targets',
+    '@aws-cdk/aws-sqs',
+    '@aws-cdk/aws-lambda-event-sources',
+    '@aws-cdk/aws-stepfunctions',
+    '@aws-cdk/aws-stepfunctions-tasks',
+  ],
+  devDeps: [
+    '@types/aws-lambda',
+  ],
+  deps: [
+    'aws-lambda',
+    'aws-sdk',
+    'axios',
+  ],
+  release: false,
 });
+
+const common_exclude = ['cdk.context.json', '.aws-sam/'];
+project.npmignore.exclude(...common_exclude);
+project.gitignore.exclude(...common_exclude);
+
 project.synth();

@@ -1,0 +1,13 @@
+{
+    "version": "0",
+    "id": "",
+    "detail-type": "Scheduled Event",
+    "source": "aws.events",
+    "account": "",
+    "time": "",
+    "region": "",
+    "resources": [
+        ""
+    ],
+    "detail": {}
+}

@@ -1,0 +1,34 @@
+{
+    "Records": [
+        {
+            "messageId": "",
+            "receiptHandle": "",
+            "body": " ",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "",
+                "SenderId": "",
+                "ApproximateFirstReceiveTimestamp": ""
+            },
+            "messageAttributes": {
+                "topicArn": {
+                    "stringValue": "arn:aws:sns:us-east-1:5*******7:chatime_notifier_19846",
+                    "stringListValues": [],
+                    "binaryListValues": [],
+                    "dataType": "String"
+                },
+                "uberEatsUrl": {
+                    "stringValue": "https://www.ubereats.com/store/chatime-king-e/r6cjl5irQ8SVtDTYcwggBQ",
+                    "stringListValues": [],
+                    "binaryListValues": [],
+                    "dataType": "String"
+                }
+            },
+            "md5OfMessageAttributes": "",
+            "md5OfBody": "",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "",
+            "awsRegion": ""
+        }
+    ]
+}

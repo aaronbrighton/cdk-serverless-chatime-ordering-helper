@@ -21,3 +21,5 @@ tsconfig.tsbuildinfo
 /tsconfig.eslint.json
 cdk.out/
 .cdk.staging/
+cdk.context.json
+.aws-sam/
