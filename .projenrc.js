@@ -2,7 +2,7 @@ const { AwsCdkTypeScriptApp } = require('projen');
 const project = new AwsCdkTypeScriptApp({
   cdkVersion: '1.95.2',
   defaultReleaseBranch: 'main',
-  name: 'chatime-notifier',
+  name: 'cdk-serverless-chatime-ordering-helper',
   authorAddress: 'aaron@aaronbrighton.ca',
   authorName: 'Aaron Brighton',
   cdkDependencies: [

@@ -25,11 +25,11 @@ export class ChatimeNotifier extends Stack {
     });
 
     // Amazon Pinpoint will route in-bound SMS messages to this topic
-    const subscriberTopic = new sns.Topic(this, 'subscriber-topic');
+    const smsRelayTopic = new sns.Topic(this, 'sms-relay-topic');
 
     // Output it, as someone will need to manually stitch Pinpoint to this topic
-    new CfnOutput(this, 'subscriber-topic-output', {
-      value: subscriberTopic.topicArn,
+    new CfnOutput(this, 'sms-relay-topic-output', {
+      value: smsRelayTopic.topicArn,
     });
 
     // The logic that gets called when someone is looking for the closest store and requesting monitoring of it
@@ -68,7 +68,7 @@ export class ChatimeNotifier extends Stack {
         }),
       ],
     });
-    subscriberTopic.addSubscription(new sns_subscriptions.LambdaSubscription(subscriberLambda));
+    smsRelayTopic.addSubscription(new sns_subscriptions.LambdaSubscription(subscriberLambda));
 
     // This queue will be populated with messages representing individual stores tasked for monitoring
     const monitoringQueue = new sqs.Queue(this, 'monitoring-queue');

@@ -1,5 +1,5 @@
 {
-  "name": "chatime-notifier",
+  "name": "cdk-serverless-chatime-ordering-helper",
   "scripts": {
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
